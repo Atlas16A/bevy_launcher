@@ -1,0 +1,11 @@
+[package]
+name = "bevy_launcher"
+version = "0.2.0"
+edition = "2024"
+
+[dependencies]
+bevy = { version = "0.16.0", features = ["jpeg"] }
+discord-rich-presence = "0.2.5"
+rfd = "0.15.3"
+bevy-settings = "0.7.0"
+open = "5.3.2"

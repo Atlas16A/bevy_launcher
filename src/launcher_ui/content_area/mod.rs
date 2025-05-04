@@ -1,0 +1,10 @@
+pub mod assets_ui;
+pub mod community_ui;
+pub mod content_area_plugin;
+pub mod donate_ui;
+pub mod installs_ui;
+pub mod learn_ui;
+pub mod new_project;
+pub mod projects_ui;
+pub mod settings_ui;
+pub mod templates_ui;
