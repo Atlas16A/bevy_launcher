@@ -10,6 +10,5 @@ impl Plugin for WindowIconPlugin {
 /// Sets the window icon for the application.
 /// TODO: Implement this for all platforms.
 /// TODO: Use the Bevy icon.
-fn set_window_icon(windows: NonSend<WinitWindows>) {
-    //cry
+fn set_window_icon() {
 }
