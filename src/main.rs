@@ -10,9 +10,6 @@ use window_icon_plugin::WindowIconPlugin;
 mod launcher_ui;
 use launcher_ui::{banner::BannerPlugin, base::LauncherUIPlugin};
 
-mod discord_integration;
-use crate::discord_integration::discord_plugin::DiscordPlugin;
-
 mod cargo_env_plugin;
 use cargo_env_plugin::CargoEnvPlugin;
 
@@ -41,7 +38,6 @@ fn main() {
         WindowIconPlugin,
         SystemCheckPlugin,
         BannerPlugin,
-        DiscordPlugin,
         LauncherSettingsPlugin,
     ));
 
