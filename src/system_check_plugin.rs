@@ -30,35 +30,6 @@ fn check_for_rustup() -> bool {
     }
 }
 
-/* fn install_rustup() {
-    //Do nothing for now
-    if cfg!(target_os = "linux") {
-        let _ = std::process::Command::new("curl")
-            .arg("--proto")
-            .arg("`=https`")
-            .arg("--tlsv1.2")
-            .arg("-sSf")
-            .arg("https://sh.rustup.rs")
-            .arg("|")
-            .arg("sh")
-            .spawn();
-    } else if cfg!(target_os = "windows") {
-    } 
-} */
-
-/* fn check_for_cargo() -> bool {
-    if std::process::Command::new("cargo")
-        .arg("-V")
-        .output()
-        .is_err()
-    {
-        error!("Cargo is not installed. Please install it from https://rustup.rs/");
-        false
-    } else {
-        true
-    }
-} */
-
 fn install_rustup_ui(mut commands: Commands, main_area: Query<Entity, With<MainArea>>) {
     let main_area = main_area.single();
     let rust_popup = commands.spawn(modal()).id();
