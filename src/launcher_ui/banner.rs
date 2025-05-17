@@ -68,7 +68,7 @@ fn create_banner(
     asset_server: Res<AssetServer>,
     settings: Res<Settings>,
 ) {
-    if !settings.banner.enabled {
+    if !settings.appearance.banner.enabled {
         return;
     }
     let root = root.single().unwrap();
