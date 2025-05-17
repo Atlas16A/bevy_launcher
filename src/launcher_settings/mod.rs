@@ -2,7 +2,10 @@ use bevy::prelude::*;
 use bevy_settings::{Deserialize, PersistSetting, PersistSettings, Serialize, SettingsPlugin};
 
 mod appearance;
-pub use appearance::{AppearanceSettings, BannerSetting, LanguageSetting};
+pub use appearance::AppearanceSettings;
+
+mod cargo;
+pub use cargo::CargoSettings;
 
 pub struct LauncherSettingsPlugin;
 
@@ -30,4 +33,5 @@ pub fn persist_settings(mut writer: EventWriter<PersistSettings>) {
 /// TODO: Explore improving the bevy_settings crate's api/documentation.
 pub struct Settings {
     pub appearance: AppearanceSettings,
+    pub cargo: CargoSettings,
 }
