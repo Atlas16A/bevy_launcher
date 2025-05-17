@@ -1,6 +1,9 @@
 use bevy::prelude::*;
 use bevy_settings::{Deserialize, PersistSetting, PersistSettings, Serialize, SettingsPlugin};
 
+mod appearance;
+pub use appearance::{AppearanceSettings, BannerSetting, LanguageSetting};
+
 pub struct LauncherSettingsPlugin;
 
 impl Plugin for LauncherSettingsPlugin {
@@ -26,17 +29,5 @@ pub fn persist_settings(mut writer: EventWriter<PersistSettings>) {
 /// Due to the way the bevy_settings crate works, the settings are inside a main Settings struct. TODO: Change this so individual resources can be used for each setting.
 /// TODO: Explore improving the bevy_settings crate's api/documentation.
 pub struct Settings {
-    pub banner: BannerSetting,
-}
-
-#[derive(Resource, Serialize, Deserialize, Clone, Copy, Debug)]
-#[serde(crate = "bevy_settings::serde")]
-pub struct BannerSetting {
-    pub enabled: bool,
-}
-
-impl Default for BannerSetting {
-    fn default() -> Self {
-        Self { enabled: true }
-    }
+    pub appearance: AppearanceSettings,
 }
