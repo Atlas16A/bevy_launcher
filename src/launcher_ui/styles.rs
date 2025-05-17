@@ -33,9 +33,9 @@ pub(crate) const MD_FONT_SIZE: f32 = 13.0;
 pub(crate) const LG_FONT_SIZE: f32 = 14.0;
 pub(crate) const XL_FONT_SIZE: f32 = 16.0;
 
-pub(crate) fn xsm_font_center(text: String) -> impl Bundle {
+pub(crate) fn xsm_font_center(text: impl Into<String>) -> impl Bundle {
     (
-        Text(text),
+        Text(text.into()),
         TextFont {
             font_size: XSM_FONT_SIZE,
             line_height: LineHeight::Px(16.0),
@@ -47,9 +47,9 @@ pub(crate) fn xsm_font_center(text: String) -> impl Bundle {
         },
     )
 }
-pub(crate) fn sm_font_center(text: String) -> impl Bundle {
+pub(crate) fn sm_font_center(text: impl Into<String>) -> impl Bundle {
     (
-        Text(text),
+        Text(text.into()),
         TextFont {
             font_size: SM_FONT_SIZE,
             line_height: LineHeight::Px(16.0),
@@ -61,9 +61,9 @@ pub(crate) fn sm_font_center(text: String) -> impl Bundle {
         },
     )
 }
-pub(crate) fn md_font_center(text: String) -> impl Bundle {
+pub(crate) fn md_font_center(text: impl Into<String>) -> impl Bundle {
     (
-        Text(text),
+        Text(text.into()),
         TextFont {
             font_size: MD_FONT_SIZE,
             line_height: LineHeight::Px(16.0),
@@ -75,9 +75,9 @@ pub(crate) fn md_font_center(text: String) -> impl Bundle {
         },
     )
 }
-pub(crate) fn lg_font_center(text: String) -> impl Bundle {
+pub(crate) fn lg_font_center(text: impl Into<String>) -> impl Bundle {
     (
-        Text(text),
+        Text(text.into()),
         TextFont {
             font_size: LG_FONT_SIZE,
             line_height: LineHeight::Px(16.0),
@@ -89,9 +89,9 @@ pub(crate) fn lg_font_center(text: String) -> impl Bundle {
         },
     )
 }
-pub(crate) fn sm_font_left(text: String) -> impl Bundle {
+pub(crate) fn sm_font_left(text: impl Into<String>) -> impl Bundle {
     (
-        Text(text),
+        Text(text.into()),
         TextFont {
             font_size: SM_FONT_SIZE,
             line_height: LineHeight::Px(16.0),
@@ -103,9 +103,9 @@ pub(crate) fn sm_font_left(text: String) -> impl Bundle {
         },
     )
 }
-pub(crate) fn md_font_left(text: String) -> impl Bundle {
+pub(crate) fn md_font_left(text: impl Into<String>) -> impl Bundle {
     (
-        Text(text),
+        Text(text.into()),
         TextFont {
             font_size: MD_FONT_SIZE,
             line_height: LineHeight::Px(16.0),
@@ -117,9 +117,9 @@ pub(crate) fn md_font_left(text: String) -> impl Bundle {
         },
     )
 }
-pub(crate) fn lg_font_left(text: String) -> impl Bundle {
+pub(crate) fn lg_font_left(text: impl Into<String>) -> impl Bundle {
     (
-        Text(text),
+        Text(text.into()),
         TextFont {
             font_size: LG_FONT_SIZE,
             line_height: LineHeight::Px(16.0),
@@ -131,9 +131,9 @@ pub(crate) fn lg_font_left(text: String) -> impl Bundle {
         },
     )
 }
-pub(crate) fn sm_font_right(text: String) -> impl Bundle {
+pub(crate) fn sm_font_right(text: impl Into<String>) -> impl Bundle {
     (
-        Text(text),
+        Text(text.into()),
         TextFont {
             font_size: SM_FONT_SIZE,
             line_height: LineHeight::Px(16.0),
@@ -145,9 +145,9 @@ pub(crate) fn sm_font_right(text: String) -> impl Bundle {
         },
     )
 }
-pub(crate) fn md_font_right(text: String) -> impl Bundle {
+pub(crate) fn md_font_right(text: impl Into<String>) -> impl Bundle {
     (
-        Text(text),
+        Text(text.into()),
         TextFont {
             font_size: MD_FONT_SIZE,
             line_height: LineHeight::Px(16.0),
@@ -159,9 +159,9 @@ pub(crate) fn md_font_right(text: String) -> impl Bundle {
         },
     )
 }
-pub(crate) fn lg_font_right(text: String) -> impl Bundle {
+pub(crate) fn lg_font_right(text: impl Into<String>) -> impl Bundle {
     (
-        Text(text),
+        Text(text.into()),
         TextFont {
             font_size: LG_FONT_SIZE,
             line_height: LineHeight::Px(16.0),
@@ -173,9 +173,9 @@ pub(crate) fn lg_font_right(text: String) -> impl Bundle {
         },
     )
 }
-pub(crate) fn xl_font_center(text: String, color: Color) -> impl Bundle {
+pub(crate) fn xl_font_center(text: impl Into<String>, color: Color) -> impl Bundle {
     (
-        Text(text),
+        Text(text.into()),
         TextFont {
             font_size: XL_FONT_SIZE,
             line_height: LineHeight::Px(16.0),
