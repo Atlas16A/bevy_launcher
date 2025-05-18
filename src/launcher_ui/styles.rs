@@ -188,6 +188,35 @@ pub(crate) fn xl_font_center(text: String, color: Color) -> impl Bundle {
         TextColor(color),
     )
 }
+pub(crate) fn custom_size_font_center(
+    text: impl Into<String>,
+    size: impl Into<f32>,
+) -> impl Bundle {
+    (
+        Text(text.into()),
+        TextFont {
+            font_size: size.into(),
+            ..default()
+        },
+        TextLayout {
+            justify: JustifyText::Center,
+            ..default()
+        },
+    )
+}
+pub(crate) fn custom_size_font_right(text: impl Into<String>, size: impl Into<f32>) -> impl Bundle {
+    (
+        Text(text.into()),
+        TextFont {
+            font_size: size.into(),
+            ..default()
+        },
+        TextLayout {
+            justify: JustifyText::Right,
+            ..default()
+        },
+    )
+}
 
 pub(crate) const SM_PADDING: UiRect = UiRect::all(Val::Px(4.0));
 pub(crate) const MD_PADDING: UiRect = UiRect::all(Val::Px(6.0));
